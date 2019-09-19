@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <div *ngIf="book">
+        <div style="width: 425px; text-align: left;">
+          <form>
+            <div class="form-group">
+              <label for="id">Id</label>
+              <input type="text" class="form-control" id="id" required [(ngModel)]="book.id" name="id" disabled />
+            </div>
+
+            <div class="form-group">
+              <label for="id">Judul</label>
+              <input type="text" class="form-control" id="judul" required [(ngModel)]="book.judul" name="judul">
+            </div>
+
+            <div class="form-group">
+              <label for="id">Penerbit</label>
+              <input type="text" class="form-control" id="penerbit" required [(ngModel)]="book.penerbit" name="penerbit">
+            </div>
+
+            <div class="form-group">
+              <label for="id">Denda</label>
+              <input type="text" class="form-control" id="danda" required [(ngModel)]="book.denda" name="denda">
+            </div>
+
+            <div class="form-group">
+              <label for="id">Stok</label>
+              <input type="text" class="form-control" id="stok" required [(ngModel)]="book.stok" name="stok">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <button class="btn btn-outline-danger" (click)="deleteBook()">Delete</button>&nbsp;&nbsp;
+  <button class="btn btn-outline-secondary" (click)="updateBook()">Update</button>
+</div>

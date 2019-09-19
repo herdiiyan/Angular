@@ -1,0 +1,28 @@
+<div class="container">
+  <button (click)="Refresh()" class="btn btn-outline-light" data-toggle="tooltip" title="Refresh"><i
+      class="fas fa-sync-alt"></i></button>&nbsp;
+  <button class="btn btn-outline-light" routerLink="Add">
+    <i class="fas fa-plus"></i>
+  </button>
+  <br />
+  <br />
+  <h3>BOOKS TITLE</h3>
+  <div class="row">
+    <div class="col-md-6" *ngFor="let book of books">
+      <div class="card text-center">
+        <div class="card-body">
+          <ngb-accordion #acc="ngbAccordion">
+            <ngb-panel id="toggle-1" title="{{ book.judul }}">
+              <ng-template ngbPanelContent>
+                <app-book-details [book]='book'></app-book-details>
+              </ng-template>
+            </ngb-panel>
+            <hr />
+          </ngb-accordion>
+          <br>
+          <button class="btn btn-sm btn-outline-primary mr-2" (click)="acc.toggle('toggle-1')">Detail</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

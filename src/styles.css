@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+#flex {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+body {
+  background-image: url('./assets/image/bg1.jpg')
+}
+
+h3,
+h1 {
+  font-family: fantasy;
+  text-align: center;
+}
